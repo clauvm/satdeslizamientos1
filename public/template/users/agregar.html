@@ -1,0 +1,84 @@
+   <div class="row" ng-controller="usuariosCtrl">
+      <div class="col-md-6"> 
+      	<form accept-charset="utf-8" name="agregarForm" ng-submit="create()">
+      		<h2>Ingrese datos</h2>
+      		<table>
+                  <tr>
+                        <td>C.I. </td>
+                        <td><input ng-model="ci" type="text" placeholder="C.I." class="form-control" name="ci" required></td>
+                        <span style="color:red" ng show="agregarForm.ci.$dirty && agregarForm.ci.$invalid">
+                              <span ng-show="agregarForm.ci.$error.required">Carnet de identidad es requerido </span>
+                        </span>
+                  </tr>
+      		<tr>
+      			<td>Nombre</td>
+      			<td><input ng-model="nombre" type="text" placeholder="Nombre" class="form-control" name="nombre" required></td>
+                        <span style="color:red" ng-show="agregarForm.nombre.$dirty && agregarForm.nombre.$invalid">
+                              <span ng-show="agregarForm.nombre.$error.required">Nombre es requerido</span>
+                        </span>
+      		</tr>
+      		<tr>
+      			<td>Apellido Paterno</td>
+      			<td><input ng-model="apellidop" type="text" placeholder="Ap. Paterno" class="form-control" name="apellidop" required></td>
+                        <span style="color:red" ng-show="agregarForm.apellidop.$dirty && agregarForm.apellidop.$invalid">
+                              <span ng-show="agregarForm.apellidop.$error.required">Apellido Paterno es requerido</span>
+                        </span>
+      		</tr>
+      		<tr>
+      			<td>Apellido Materno</td>
+      			<td><input ng-model="apellidom" type="text" placeholder="Ap. Materno" class="form-control" name="apellidom" required></td>
+                        <span style="color:red" ng-show="agregarForm.apellidom.$dirty && agregarForm.apellidom.$invalid">
+                              <span ng-show="agregarForm.apellidom.$error.required">Apellido Materno es requerido</span>
+                        </span>
+      		</tr>
+      		<tr>
+      			<td>Telefono</td>
+      			<td><input ng-model="telefono" type="number" placeholder="Telefono" class="form-control" name="telefono" required></td>
+                        <span style="color:red" ng-show="agregarForm.telefono.$dirty && agregarForm.telefono.$invalid">
+                              <span ng-show="agregarForm.telefono.$error.required">Telefono es requerido</span>
+                        </span>
+      		</tr>
+      		<tr>
+      			<td>Email</td>
+      			<td><input ng-model="email" type="email" placeholder="Email" class="form-control" name="email" required></td>
+                        <span style="color:red" ng-show="agregarForm.email.$dirty && agregarForm.email.$invalid">
+                              <span ng-show="agregarForm.email.$error.required">Email es requerido</span>
+                        </span>
+      		</tr>
+      		<tr>
+      			<td>Dirección</td>
+      			<td><input ng-model="direccion" type="text" placeholder="Dirección" class="form-control"></td>
+      		</tr>
+      		<tr>
+      			<td>Rol</td>
+      			<td><select ng-model="rol" type="text" placeholder="Rol" class="form-control" name="rol" ng-options="x for x in roles" required></select></td>
+                        <span style="color:red" ng-show="agregarForm.rol.$dirty && agregarForm.rol.$invalid">
+                              <span ng-show="agregarForm.rol.$error.required">Rol es requerido</span>
+                        </span>
+      		</tr>
+      		<tr>
+      			<td>Username</td>
+      			<td><input ng-model="username" type="text" placeholder="Username" class="form-control" name="username" required></td>
+                        <span style="color:red" ng-show="agregarForm.username.$dirty && agregarForm.username.$invalid">
+                              <span ng-show="agregarForm.username.$error.required">Username es requerido</span>
+                        </span>
+      		</tr>
+      		<tr>
+      			<td>Password</td>
+      			<td><input ng-model="password" type="password" placeholder="Password" class="form-control" name="password" required></td>
+                        <span style="color:red" ng-show="agregarForm.password.$dirty && agregarForm.password.$invalid">
+                              <span ng-show="agregarForm.password.$error.required">Password es requerido</span>
+                        </span>
+      		</tr>
+      		<tr>
+      			<td>Fecha Nacimiento</td>
+      			<td><input ng-model="fnacimiento" type="date" class="form-control" calendar maxdate="todays"></td>
+      		</tr>
+      		<tr >
+                        <td><a ng-href="#/users" class="btn btn-danger" role="button">Cancelar </a></td>
+      			<td><input type="submit" value="Ingresar" ng-disabled="agregarForm.ci.$dirty && agregarForm.ci.$invalid || agregarForm.nombre.$dirty && agregarForm.nombre.$invalid || agregarForm.apellidop.$dirty && agregarForm.apellidop.$invalid || agregarForm.apellidom.$dirty && agregarForm.apellidom.$invalid || agregarForm.email.$dirty && agregarForm.email.$invalid || agregarForm.telefono.$dirty && agregarForm.telefono.$invalid || agregarForm.rol.$dirty && agregarForm.rol.$invalid || agregarForm.username.$dirty && agregarForm.username.$invalid || agregarForm.password.$dirty && agregarForm.password.$invalid" class="btn btn-success"></td>
+      		</tr>		
+      	</table>
+      	</form>
+      </div>
+   </div>   

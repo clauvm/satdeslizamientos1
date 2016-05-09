@@ -1,0 +1,31 @@
+   <div class="row" ng-controller="usuariosCtrl" ng-init="find()">
+      <div class="col-md-6">   
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Apellido Paterno</th>
+                <th>Apellido Materno</th>
+                <th>Telefono</th>
+                <th>Email</th>
+                <th ng-show="'{{authentication.usuario.rol}}' == 'admi'">Ver usuario</th>
+                <th ng-show="'{{authentication.usuario.rol}}' == 'admi'">Editar</th>
+                <th ng-show="'{{authentication.usuario.rol}}' == 'admi'">Borrar</th>
+              </tr>
+            </thead>
+              
+            <tbody ng-repeat="user in users">
+              <tr>
+                <td>{{user.nombre}}</td>
+                <td>{{user.apellidop}}</td>
+                <td>{{user.apellidom}}</td>
+                <td>{{user.telefono}}</td>
+                <td>{{user.email}}</td>
+                <td> <a ng-href="#/users/{{user._id}}" ng-show="authentication.usuario._id==user._id || '{{authentication.usuario.rol}}' == 'admi'" class="btn btn-info" role="button">Ver usuario </a></td>
+                <td> <a ng-href="#/users/{{user._id}}/edit" ng-show="'{{authentication.usuario.rol}}' == 'admi'" class="btn btn-warning" role="button">Editar</a> </td>
+                <td> <a ng-href="#" data-ng-click="delete(user);" ng-show="'{{authentication.usuario.rol}}' == 'admi' && authentication.usuario._id!=user._id" class="btn btn-danger" role="button">Eliminar</a> </td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+  </div>

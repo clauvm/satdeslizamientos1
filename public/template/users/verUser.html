@@ -1,0 +1,56 @@
+
+ <div class="row" ng-controller="usuariosCtrl" ng-init="findOne()">
+      <div class="col-md-6"> 
+        <table class="table table-bordered">
+                <tr>
+                    <td>C.I.</td>
+                    <td>{{user.ci}}</td>
+                </tr>
+                <tr>
+                    <td>Nombre</td>
+                    <td>{{user.nombre}}</td>
+                </tr>
+                <tr>
+                    <td>Apellido paterno</td>
+                    <td>{{user.apellidop}}</td>
+                </tr>
+                <tr>
+                    <td>Apellido materno</td>
+                    <td>{{user.apellidom}}</td>
+                </tr>
+                <tr>
+                    <td>Teléfono</td>
+                    <td>{{user.telefono}}</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>{{user.email}}</td>
+                </tr>
+                <tr>
+                    <td>Dirección</td>
+                    <td>{{user.direccion}}</td>
+                </tr>
+                <tr>
+                    <td>Rol</td>
+                    <td>{{user.rol}}</td>
+                </tr>
+                <tr>
+                    <td>Username</td>
+                    <td>{{user.username}}</td>
+                </tr>
+                <tr>
+                    <td>Fecha de nacimiento</td>
+                    <td>{{user.fnacimiento | date: 'fullDate'}}</td>
+                </tr>
+                <tr>
+                    <td><a ng-href="#/users/{{user._id}}/edit" class="btn btn-warning" role="button">Editar</a></td>
+                    <td><a ng-click="delete();" class="btn btn-danger" role="button">Eliminar</a></td>
+                </tr>
+                <tr>
+                    <td colspan="2" ><a ng-href="#/users" class="btn btn-info" role="button">Volver a lista</a></td>
+                </tr>
+
+        </table>
+        
+      </div>
+</div>

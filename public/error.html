@@ -1,0 +1,34 @@
+<div class="row" ng-controller="usuariosCtrl">
+     	<div class="col-md-6">   
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Telefono</th>
+                <th>Email</th>
+                <th>Direccion</th>
+                <th>Username</th>
+                <th>Fecha de nacimienta</th>
+                <th>Editar</th>
+                <th>Borrar</th>
+              </tr>
+            </thead>
+            	
+            <tbody ng-repeat="user in users">
+              <tr>
+                <td>{{user.nombre}}</td>
+                <td>{{user.apellidos}}</td>
+                <td>{{user.telefono}}</td>
+                 <td>{{user.email}}</td>
+                  <td>{{user.direccion}}</td>
+                 <td>{{user.username}}</td>
+                  <td>{{user.fnacimiento}}</td>
+                  <td><button type="button" class="btn btn-warning">Editar</button></td>
+                  <td><button type="button" class="btn btn-danger">Eliminar</button></td>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+	</div>

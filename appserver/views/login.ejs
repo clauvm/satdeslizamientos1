@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title><%= title %></title>
+	<link rel="stylesheet" type="text/css" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/ie10-viewport-bug-workaround.css">
+	<link rel="stylesheet" type="text/css" href="/css/theme.css">
+	<!--<link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.min.css">-->
+  <link rel="stylesheet" type="text/css" href="/css/jumbotron.css">
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap1.css">
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">SAT deslizamientos</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#/">Inicio</a></li>
+          </ul>
+          <form class="navbar-form navbar-right" action="/login" method="post">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control" name="username">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control" name="password">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+          </form>
+          <% for(var i in messages) { %>
+            <div class="flash"><%= messages[i] %></div>
+          <% }%>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+     
+    <div class="container">	
+
+  <div class="row">
+  <div class="col-sm-20">
+    <h2>Deslizamientos</h2>
+    <p>Un deslizamiento es un tipo de corrimiento o movimiento de masa de tierra, provocado por la inestabilidad de un talud.
+      Se produce cuando una gran masa de terreno se convierte en zona inestable y desliza con respecto a una zona estable, a través de una superficie o franja de terreno pequeño espesor. Los deslizamientos se producen cuando en la franja se alcanza la tensión tangencial máxima en todos sus puntos.
+      Estos tipos de inestabilidades son evitables por medios técnicos. 
+      Sin embargo, el resto de tipos de corrimientos (flujo de arcilla, licuefacción y reptación) 
+      resultan más difíciles de evitar.
+    </p>
+  </div>
+  <div class="col-sm-20">
+    <h2>Torrentes de barro</h2>
+    <p>La zona de Obrajes tiene una topografía definida como Torrente de Barro, la cual es una mezcla heterogénea de arcilla, limo, arena y grava depositada por corrientes saturadas de escombros.  En los torrentes de barro pueden estar presentes fragmentos de algunos o todos los materiales que se encuentran “in situ” pendiente arriba de la ladera del valle
+    </p>
+  </div>
+  <div class="col-sm-20">
+    <img src="img/obrajes1.jpg" class="img-responsive" alt="Deslizamiento Obrajes" />
+  </div>
+  <div class="col-sm-20">
+    <p>Este tipo de áreas no son aptas para edificaciones. En este sentido, la construcción de muros de contención y de sistemas de drenaje sólo “minimizan” el riesgo, mas no lo hacen desaparecer.
+    </p>
+  </div>
+  <div class="col-sm-20">
+    <h2>Que hacer en caso de deslizamientos</h2>
+    <h3>Antes</h3>
+    <ul>
+      <li>Conserve la calma.</li>
+      <li>Corra al lugar cercano más seguro. No pierda tiempo recogiendo pertenencias.</li>
+      <li>Trate de evadir el material que desciende, corriendo en forma lateral.</li>
+      <li>Aléjese de estructuras que puedan derrumbarse. No ingrese a zonas afectadas o que puedan deslizarse.</li>
+      <li>Infunda serenidad y ayude a los demás, especialmente niños, ancianos, discapacitados y personas en pánico.</li>
+      <li>Para rescatar a alguien, use cuerdas, extensiones, palos y lo que tenga que sea seguro para usted y los demás. Trabaje con otras personas.</li>
+      <li>Si está en un vehículo vaya rápidamente a un lugar seguro, o sálgase del mismo.</li>
+    </ul>
+    <h3>Despues</h3>
+    <ul>
+      <li>Manténgase alejado del área del deslizamiento. Puede haber peligro de nuevos deslizamientos.</li>
+      <li>Revise si hay personas heridas o atrapadas cerca al área del deslizamiento.</li>
+      <li>Preste ayuda y apoyo. Para rescatar a alguien, use cuerdas, extensiones, palos y lo que tenga que sea seguro para usted y los demás. Trabaje  con otras personas.</li>
+      <li>Ayude a quienes pueden requerir asistencia: sus vecinos, niños, adultos y discapacitados.</li>
+      <li>Sintonice las noticias sobre la emergencia.</li>
+      <li>Recuerde que pueden ocurrir inundaciones después del flujo de lodo o de escombros.</li>
+      <li>Revise daños en líneas de servicios y reporte cualquier daño a las entidades encargadas del mantenimiento.</li>
+    </ul> 
+  </div>
+</div>
+    </div>
+	
+  <script type="text/javascript" src="/lib/jquery/dist/jquery.min.js"></script>
+	<script src="/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+</body>
+</html>
